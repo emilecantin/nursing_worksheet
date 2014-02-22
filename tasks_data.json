@@ -8,37 +8,36 @@
         {
           "name": "Bilirubine",
           "type": "BABY",
-          "start_time": "2014-02-23T16:00:00.000Z",
-          "number_of_repetitions": "3",
-          "time_interval_minutes": "60"
+          "start_time": "2014-02-23T16:00:00.000Z"
+        },
+        {
+          "name": "Bilirubine",
+          "type": "BABY",
+          "start_time": "2014-02-23T17:00:00.000Z"
         },
         {
           "name": "RR",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T11:00:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T11:00:00.000Z"
         },
         {
           "name": "PLS",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T11:00:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T11:00:00.000Z"
         },
         {
           "name": "PA",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T11:00:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T11:00:00.000Z"
         },
         {
           "name": "SatO2",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T15:00:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T15:00:00.000Z"
+        },
+        {
+          "name": "Allergie: Arachides",
+          "type": "NOTE"
         }
       ]
     },
@@ -49,37 +48,31 @@
         {
           "name": "RR",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T14:30:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T14:30:00.000Z"
         },
         {
           "name": "PLS",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T07:30:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T07:30:00.000Z"
         },
         {
           "name": "PA",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T08:30:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T08:30:00.000Z"
         },
         {
           "name": "SatO2",
           "type": "VITAL_SIGNS",
-          "start_time": "2014-02-23T10:30:00.000Z",
-          "number_of_repetitions": "4",
-          "time_interval_minutes": "120"
+          "start_time": "2014-02-23T10:30:00.000Z"
         },
         {
           "name": "Syndrôme du bébé secoué",
           "type": "TEACHING",
-          "start_time": "2014-02-23T9:30:00.000Z",
-          "number_of_repetitions": "0",
-          "time_interval_minutes": "0"
+          "start_time": "2014-02-23T9:30:00.000Z"
+        },
+        {
+          "name": "Antécédents de violences",
+          "type": "NOTE"
         }
       ]
     }
