@@ -2,8 +2,8 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
   var TreeView = views.TreeView = Marionette.CompositeView.extend({
     template: _.template('<label><%= name %></label> \
       <input type="text" value="<%= name %>"/> \
+      <button class="btn btn-success btn-xs add-task">+</button> \
       <ul class="list-group node-list"></ul> \
-      <button class="btn btn-success btn-xs pull-right add-task">+</button> \
     '),
     tagName: 'li',
     className: 'list-group-item',

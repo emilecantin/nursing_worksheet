@@ -181,7 +181,8 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
 
     events: {
       'click .remove-patient': 'onRemovePatientClick',
-      'change .diagnostic-select': 'onDiagnosticChange'
+      'change .diagnostic-select': 'onDiagnosticChange',
+      'change .patient-name': 'onPatientNameChange'
     },
 
     regions: {
@@ -189,18 +190,23 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
     },
 
     ui: {
-      diagnostic: '.diagnostic-select'
+      diagnostic: '.diagnostic-select',
+      patientName: '.patient-name'
     },
 
     onRender: function() {
       this.renderTaskTree();
     },
 
+    updateTasks: function() {
+      this.model.tasks = new models.Diagnostics(_(diagnostics).findWhere({id: this.ui.diagnostic.val()}).tasks);
+    },
+
     renderTaskTree: function() {
-      var tasks = _(diagnostics).findWhere({id: this.ui.diagnostic.val()}).tasks;
+      this.updateTasks();
 
       var taskTree = new views.TreeRoot({
-        collection: new models.Diagnostics(tasks)
+        collection: this.model.tasks
       });
 
       this.taskTree.show(taskTree);
@@ -210,7 +216,12 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
       this.model.destroy();
     },
 
+    onPatientNameChange: function() {
+      this.model.set('name', this.ui.patientName.val());
+    },
+
     onDiagnosticChange: function() {
+      this.model.set('diagnostic', this.ui.diagnostic.val());
       this.renderTaskTree();
     }
   });
