@@ -32,7 +32,6 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.patientsProfile);
 app.get('/users', user.list);
-app.get('/login', routes.login.get);
 
 db.sequelize.sync({ force: true }).complete(function(err) {
 	if (err) {
