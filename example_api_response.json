@@ -1,27 +1,85 @@
 {
 	"patients" : [
 		{
-			"name": "Roger Breton",
-			"diagnostic": "Accouchement par voie vaginale",
-			"bed": "56",
-			"description": "Whatever, some really long text"
+			"name": "Sylvie Breton",
+			"diagnostic": "Accouchement vaginal spontanné",
+			"bed": "1",
+			"description": "",
 			"tasks": [
 				{
 					"name" : "Médicaments",
+					"type": "DRUG"
+				},
+				{
+					"name" : "Signes vitaux",
+					"type": "VITAL_SIGNS",
 					"tasks" : [
-						{ "name" : "Advil" },
-						{ "name" : "Tylenol" },
-						{ "name" : "Robitussin" },
-						{ "name" : "Muffins de sa femme" }
+						{ 
+							"name" : "PA",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "PLS",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "SatO2",
+							"type": "VITAL_SIGNS" 
+						},
+						{ 
+							"name" : "RR",
+							"type": "VITAL_SIGNS"
+						}
 					]
 				},
 				{
-					"name" : "Soins",
-					"tasks" : [
-						{ "name" : "Changer Pansement" },
-						{ "name" : "Signes Vitaux" },
-						{ "name" : "Massage de pieds" },
-						{ "name" : "Vérifier blessure" }
+					"name": "Enseignement",
+					"type": "TEACHING",
+					"tasks": [
+						{
+							"name": "Syndrôme du bébé secoué"
+							"type": "TEACHING"
+						}
+						{
+							"name": "Bain du bébé",
+							"type": "TEACHING"
+						}
+						{
+							"name": "Allaitement",
+							"type": "TEACHING"
+						}
+					]
+				},
+				{
+					"name": "Bébé",
+					"type": "BABY"
+					"tasks": [
+						{
+							"name": "Signes vitaux",
+							"type": "BABY"	
+						}
+						{
+							"name": "Bain",
+							"type": "BABY"
+						},
+						{
+							"name": "Tests",
+							"type": "BABY",
+							"tasks": [
+							 {
+							 	 "name": "Bilirubine",
+							 	 "type": "BABY"
+							 }
+							 {
+							 	"name": "FSC",
+							 	"type": "BABY"
+							 }
+							 {
+							 	"name": "Glycémie",
+							 	"type": "BABY"
+							 }
+							]
+						}
 					]
 				}
 			]
