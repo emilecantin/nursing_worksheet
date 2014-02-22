@@ -40,7 +40,11 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
         this.showInput();
       }
 
-      this.ui.addButton.toggle(this.model === this.model.collection.last());
+	  if (this.model === this.model.collection.last()) {
+		  this.ui.addButton.css('display', 'block');
+	  } else {
+		  this.ui.addButton.css('display', 'none');
+	  }
     },
 
     onLabelClick: function() {
