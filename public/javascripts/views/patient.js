@@ -4,7 +4,8 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
     className: 'row patient-row',
 
     events: {
-      'click .remove-patient': 'onRemovePatientClick'
+      'click .remove-patient': 'onRemovePatientClick',
+      'change .diagnostic-select': 'onDiagnosticChange'
     },
 
     regions: {
@@ -12,6 +13,10 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
     },
 
     onRender: function() {
+      this.renderTaskTree();
+    },
+
+    renderTaskTree: function() {
       var taskTree = new views.TreeRoot({
         collection: new models.TreeNodes([
           {
@@ -41,6 +46,10 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
 
     onRemovePatientClick: function() {
       this.model.destroy();
+    },
+
+    onDiagnosticChange: function() {
+      this.renderTaskTree();
     }
   });
 

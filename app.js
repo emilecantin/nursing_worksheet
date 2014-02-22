@@ -35,7 +35,6 @@ app.get('/api/workday-conf/latest', routes.api.workdayConf.getLatest);
 app.get('/api/workday-conf/:id', routes.api.workdayConf.get);
 
 db.sequelize.sync().complete(function(err) {
-//db.sequelize.sync({ force: true }).complete(function(err) {
 	if (err) {
 		throw err
 	} else {
