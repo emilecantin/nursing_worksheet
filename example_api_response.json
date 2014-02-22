@@ -1,7 +1,36 @@
 {
-	"tasks" : [
+	"patients" : [
 		{
-			"name": "1",
+			"name": "Roger Breton",
+			"diagnostic": "Accouchement par voie vaginale",
+			"bed": "56",
+			"description": "Whatever, some really long text"
+			"tasks": [
+				{
+					"name" : "Médicaments",
+					"tasks" : [
+						{ "name" : "Advil" },
+						{ "name" : "Tylenol" },
+						{ "name" : "Robitussin" },
+						{ "name" : "Muffins de sa femme" }
+					]
+				},
+				{
+					"name" : "Soins",
+					"tasks" : [
+						{ "name" : "Changer Pansement" },
+						{ "name" : "Signes Vitaux" },
+						{ "name" : "Massage de pieds" },
+						{ "name" : "Vérifier blessure" }
+					]
+				}
+			]
+		},
+		{
+			"name": "Louise Falardeau",
+			"diagnostic": "Accouchement par voie vaginale",
+			"bed": "57",
+			"description": "Whatever, some really long text"
 			"tasks": [
 				{
 					"name" : "Médicaments",
@@ -24,30 +53,10 @@
 			]
 		},
 		{
-			"name": "2",
-			"tasks": [
-				{
-					"name" : "Médicaments",
-					"tasks" : [
-						{ "name" : "Advil" },
-						{ "name" : "Tylenol" },
-						{ "name" : "Robitussin" },
-						{ "name" : "Soluté" }
-					]
-				},
-				{
-					"name" : "Soins",
-					"tasks" : [
-						{ "name" : "Changer Pansement" },
-						{ "name" : "Signes Vitaux" },
-						{ "name" : "Massage de pieds" },
-						{ "name" : "Vérifier blessure" }
-					]
-				}
-			]
-		},
-		{
-			"name": "3",
+			"name": "Annette Gingras",
+			"diagnostic": "Accouchement par voie vaginale",
+			"bed": "58",
+			"description": "Whatever, some really long text"
 			"tasks": [
 				{
 					"name" : "Médicaments",
