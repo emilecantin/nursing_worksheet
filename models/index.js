@@ -3,21 +3,16 @@ var path      = require('path')
 var Sequelize = require('sequelize')
 var lodash    = require('lodash')
 
-var config = {
-	host: process.env.OPENSHIFT_POSTGRESQL_DB_HOST || 'localhost',
-	db: process.env.PGDATABASE || 'nursing_worksheet',
-	username: process.env.OPENSHIFT_POSTGRESQL_DB_USERNAME || 'nursing_worksheet',
-	password: process.env.OPENSHIFT_POSTGRESQL_DB_PASSWORD || 'nursing_worksheet'
-};
+var sequelize = new Sequelize('database', 'username', 'password', {
+  // sqlite! now!
+  dialect: 'sqlite',
 
-
-
-
-var sequelize = new Sequelize(config.db, config.username, config.password, {
-	host: config.host,
-	// gimme postgres, please!
-	dialect: 'postgres'
+  // the storage engine for sqlite
+  // - default ':memory:'
+  storage: '../database.sqlite'
 })
+
+
 var db        = {}
 fs.readdirSync(__dirname).filter(function(file) {
     return (file.indexOf('.') !== 0) && (file !== 'index.js')
