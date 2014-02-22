@@ -177,7 +177,7 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
 
   var Patient = views.Patient = Marionette.Layout.extend({
     template: '#patient-template',
-    className: 'row patient-row',
+    className: 'row patient-row well',
 
     events: {
       'click .remove-patient': 'onRemovePatientClick',
@@ -199,7 +199,11 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
     },
 
     updateTasks: function() {
-      this.model.tasks = new models.Diagnostics(_(diagnostics).findWhere({id: this.ui.diagnostic.val()}).tasks);
+		var diag_val = _(diagnostics).findWhere({id: this.ui.diagnostic.val()});
+		if (diag_val && diag_val.tasks) {
+			this.model.tasks = new models.Diagnostics(diag_val.tasks);
+		}
+
     },
 
     renderTaskTree: function() {

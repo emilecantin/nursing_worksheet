@@ -30,18 +30,19 @@
         <label for="name">Nom du patient</label>
         <input type="text" class="form-control patient-name" placeholder="Nom du patient">
       </div>
-      <div class="form-group">
+      <div class="form-group pull-right">
+        <button class="btn btn-danger remove-patient">X</button>
+      </div>
+      <div class="">
         <label for="type">Diagnostique</label>
         <select name="type" class="form-control diagnostic-select">
+          <option value="">Choisir...</option>
           <option value="accouchement-vaginal-spontane">Accouchement vaginal spontané</option>
           <option value="accouchement-cesarienne">Accouchement par Césarienne</option>
         </select>
       </div>
-      <div class="form-group">
-        <button class="btn btn-danger remove-patient">X</button>
-      </div>
+      <div class="task-tree-container col-md-6"></div>
     </div>
-    <div class="task-tree-container col-md-6"></div>
   </script>
 
   <script type="text/template" id="patients-template">
