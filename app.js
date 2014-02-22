@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var db = require('./models');
@@ -30,10 +29,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// ROUTING
 app.get('/', routes.patientsProfile);
-app.get('/users', user.list);
+app.get('/api/workday-conf/:id', routes.api.workdayConf.get);
 
-db.sequelize.sync({ force: true }).complete(function(err) {
+db.sequelize.sync(/* { force: true } */).complete(function(err) {
 	if (err) {
 		throw err
 	} else {
