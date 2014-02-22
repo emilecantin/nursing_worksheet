@@ -1,0 +1,21 @@
+{
+  "name": "nursing_worksheet",
+  "version": "0.0.0",
+  "homepage": "https://github.com/emilecantin/nursing_worksheet",
+  "authors": [
+    "Gabriel Bédard Sicé <bedardenator@gmail.com>"
+  ],
+  "main": "./public/stylesheets/main.css",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "./public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*"
+  }
+}
