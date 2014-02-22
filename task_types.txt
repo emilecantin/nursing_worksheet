@@ -1,0 +1,13 @@
+TYPE LABEL | DOING | IMAGE
+"DRUG" | X | drug.png
+"VITAL_SIGNS" | X | vital_signs.png
+"TEACHING" | X | teaching.png
+"BABY" | X | baby.png
+"OTHER" | X | other.png
+
+"EVALUATION"
+"VERIFICATION"
+"DAY_OFF"
+"ADMISSION"
+"WOUNDS"
+"MOBILISATION"

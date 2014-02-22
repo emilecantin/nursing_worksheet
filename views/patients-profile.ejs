@@ -16,6 +16,8 @@
   <script type="text/javascript" src="/bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
 
   <script type="text/javascript" src="/javascripts/patients-profile.js"></script>
+  <script type="text/javascript" src="/javascripts/views/tree-view.js"></script>
+  <script type="text/javascript" src="/javascripts/models/tree-node.js"></script>
   <script type="text/javascript" src="/javascripts/views/patient.js"></script>
 
   <script type="text/template" id="patient-template">
@@ -25,7 +27,7 @@
         <input type="text" class="form-control" placeholder="Nom du patient">
       </div>
       <div class="form-group">
-        <label for="type">Type</label>
+        <label for="type">Diagnostique</label>
         <select name="type" class="form-control">
           <option value="hello">Hello</option>
         </select>
@@ -34,7 +36,7 @@
         <button class="btn btn-danger remove-patient">X</button>
       </div>
     </div>
-    <div class="tree-container"></div>
+    <div class="task-tree-container col-md-12"></div>
   </script>
 
   <script type="text/template" id="patients-template">
