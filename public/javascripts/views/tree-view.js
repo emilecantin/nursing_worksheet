@@ -3,6 +3,7 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     template: _.template('<label><%= name %></label> \
       <input type="text" value="<%= name %>"/> \
       <ul class="list-group node-list"></ul> \
+      <button class="btn btn-success btn-xs pull-right add-task">+</button> \
     '),
     tagName: 'li',
     className: 'list-group-item',
@@ -11,13 +12,15 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     ui: {
       nodeList: '.node-list',
       label: 'label:first',
-      input: 'input:first'
+      input: 'input:first',
+      addButton: '.add-task:first'
     },
 
     events: {
       'click label:first': 'onLabelClick',
       'keypress input:first': 'onInputKeypress',
-      'blur input:first': 'onInputBlur'
+      'blur input:first': 'onInputBlur',
+      'click .add-task': 'onAddTaskClick'
     },
 
     modelEvents: {
@@ -36,6 +39,8 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
       } else {
         this.showInput();
       }
+
+      this.ui.addButton.toggle(this.model === this.model.collection.last());
     },
 
     onLabelClick: function() {
@@ -64,6 +69,11 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
 
     onNameEdit: function() {
       this.model.set('name', this.ui.input.val());
+    },
+
+    onAddTaskClick: function() {
+      this.model.collection.add({});
+      this.render();
     }
   });
 

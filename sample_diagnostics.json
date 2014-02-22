@@ -85,6 +85,87 @@
     ]
   }, {
     "name": "Accouchement par césarienne",
-    "tasks": []
+    "tasks": [
+      {
+        "name" : "Médicaments",
+        "type": "DRUG"
+      },
+      {
+        "name" : "Signes vitaux",
+        "type": "VITAL_SIGNS",
+        "tasks" : [
+          {
+            "name" : "PA",
+            "type": "VITAL_SIGNS"
+          },
+          {
+            "name" : "PLS",
+            "type": "VITAL_SIGNS"
+          },
+          {
+            "name" : "SatO2",
+            "type": "VITAL_SIGNS"
+          },
+          {
+            "name" : "RR",
+            "type": "VITAL_SIGNS"
+          }
+        ]
+      },
+      {
+        "name": "Enseignement",
+        "type": "TEACHING",
+        "tasks": [
+          {
+            "name": "Syndrôme du bébé secoué",
+            "type": "TEACHING"
+          },
+          {
+            "name": "Bain du bébé",
+            "type": "TEACHING"
+          },
+          {
+            "name": "Allaitement",
+            "type": "TEACHING"
+          }
+        ]
+      },
+      {
+        "name": "Bébé",
+        "type": "BABY",
+        "tasks": [
+          {
+            "name": "Signes vitaux",
+            "type": "BABY"
+          },
+          {
+            "name": "Bain",
+            "type": "BABY"
+          },
+          {
+            "name": "Tests",
+            "type": "BABY",
+            "tasks": [
+             {
+               "name": "Bilirubine",
+               "type": "BABY"
+             },
+             {
+              "name": "FSC",
+              "type": "BABY"
+             },
+             {
+              "name": "Glycémie",
+              "type": "BABY"
+             }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Note",
+        "type": "NOTE"
+      }
+    ]
   }
 ]
