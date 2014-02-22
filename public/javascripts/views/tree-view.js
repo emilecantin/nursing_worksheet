@@ -31,7 +31,7 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     onRender: function() {
       if (!this.collection || !this.collection.length) this.ui.nodeList.hide();
 
-      if (this.model.has('name')) {
+      if (this.model.get('name')) {
         this.showLabel();
       } else {
         this.showInput();
@@ -45,7 +45,6 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     showInput: function() {
       this.ui.label.hide();
       this.ui.input.show();
-      this.ui.input.focus();
     },
 
     showLabel: function() {
@@ -65,7 +64,6 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
 
     onNameEdit: function() {
       this.model.set('name', this.ui.input.val());
-      this.showLabel();
     }
   });
 
