@@ -1,10 +1,43 @@
-App.module('views', function(views, App, Backbone, Marionette, $, _) {
+App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
   var Patient = views.Patient = Marionette.Layout.extend({
+    template: '#patient-template',
+    className: 'row patient-row',
+
     events: {
       'click .remove-patient': 'onRemovePatientClick'
     },
-    template: '#patient-template',
-    className: 'row patient-row',
+
+    regions: {
+      taskTree: '.task-tree-container'
+    },
+
+    onRender: function() {
+      var taskTree = new views.TreeRoot({
+        collection: new models.TreeNodes([
+          {
+            name: 'Meds',
+            nodes: [
+              {
+                name: 'Advil'
+              },
+              {
+                name: 'Tylenol'
+              }
+            ]
+          },
+          {
+            name: 'Soins',
+            nodes: [
+              {
+                name: 'Signes vitaux'
+              }
+            ]
+          }
+        ])
+      });
+
+      this.taskTree.show(taskTree);
+    },
 
     onRemovePatientClick: function() {
       this.model.destroy();
@@ -23,4 +56,4 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
       this.collection.add({});
     }
   });
-});
+}, App.models);
