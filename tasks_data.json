@@ -1,0 +1,87 @@
+{
+  "patients":
+  [
+    {
+      "number": "1",
+      "tasks": 
+      [
+        {
+          "name": "Bilirubine",
+          "type": "BABY",
+          "start_time": "2014-02-23T16:00:00.000Z",
+          "number_of_repetitions": "3",
+          "time_interval_minutes": "60"
+        },
+        {
+          "name": "RR",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T11:00:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "PLS",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T11:00:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "PA",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T11:00:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "SatO2",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T15:00:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "tasks": 
+      [
+        {
+          "name": "RR",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T14:30:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "PLS",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T07:30:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "PA",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T08:30:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "SatO2",
+          "type": "VITAL_SIGNS",
+          "start_time": "2014-02-23T10:30:00.000Z",
+          "number_of_repetitions": "4",
+          "time_interval_minutes": "120"
+        },
+        {
+          "name": "Syndrôme du bébé secoué",
+          "type": "TEACHING",
+          "start_time": "2014-02-23T9:30:00.000Z",
+          "number_of_repetitions": "0",
+          "time_interval_minutes": "0"
+        }
+      ]
+    }
+  ]
+}
