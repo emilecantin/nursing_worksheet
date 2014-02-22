@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "backbone": "*",
+    "backbone.marionette": "*"
   }
 }
