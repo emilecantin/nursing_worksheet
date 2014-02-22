@@ -22,7 +22,7 @@ exports.get = function(req, res) {
 			res.send(404);
 		}
 	});
-}
+};
 
 /*
  * GET latest workday-conf
@@ -45,4 +45,14 @@ exports.getLatest = function(req, res) {
 			res.send(404);
 		}
 	});
-}
+};
+
+exports.create = function(req, res) {
+	db.WorkdayConf.create({
+		date_start: req.body.date_start,
+		date_end: req.body.date_end,
+		patients_tree: JSON.stringify(req.body.patients)
+	}).success(function(workdayConf) {
+		res.send(200);
+	})
+};
