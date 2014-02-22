@@ -9,7 +9,7 @@ var sequelize = new Sequelize('database', 'username', 'password', {
 
   // the storage engine for sqlite
   // - default ':memory:'
-  storage: '../database.sqlite'
+  storage: 'database.sqlite'
 })
 
 
