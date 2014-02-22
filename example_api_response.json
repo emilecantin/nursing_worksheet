@@ -1,81 +1,276 @@
 {
+	"date_begin": "2014-02-22T20:17:47.852Z",
+	"date_end": "2014-02-23T03:17:47.852Z",
 	"patients" : [
 		{
-			"name": "Roger Breton",
-			"diagnostic": "Accouchement par voie vaginale",
-			"bed": "56",
-			"description": "Whatever, some really long text"
+			"initials": "SB",
+			"age": "22",
+			"weight": "70",
+			"number": "1",
+			"diagnostic": "Accouchement vaginal spontanné",
+			"description": "",
 			"tasks": [
 				{
 					"name" : "Médicaments",
+					"type": "DRUG"
+				},
+				{
+					"name" : "Signes vitaux",
+					"type": "VITAL_SIGNS",
 					"tasks" : [
-						{ "name" : "Advil" },
-						{ "name" : "Tylenol" },
-						{ "name" : "Robitussin" },
-						{ "name" : "Muffins de sa femme" }
+						{ 
+							"name" : "PA",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "PLS",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "SatO2",
+							"type": "VITAL_SIGNS" 
+						},
+						{ 
+							"name" : "RR",
+							"type": "VITAL_SIGNS"
+						}
 					]
 				},
 				{
-					"name" : "Soins",
-					"tasks" : [
-						{ "name" : "Changer Pansement" },
-						{ "name" : "Signes Vitaux" },
-						{ "name" : "Massage de pieds" },
-						{ "name" : "Vérifier blessure" }
+					"name": "Enseignement",
+					"type": "TEACHING",
+					"tasks": [
+						{
+							"name": "Syndrôme du bébé secoué",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Bain du bébé",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Allaitement",
+							"type": "TEACHING"
+						}
 					]
+				},
+				{
+					"name": "Bébé",
+					"type": "BABY",
+					"tasks": [
+						{
+							"name": "Signes vitaux",
+							"type": "BABY"	
+						},
+						{
+							"name": "Bain",
+							"type": "BABY"
+						},
+						{
+							"name": "Tests",
+							"type": "BABY",
+							"tasks": [
+							 {
+							 	 "name": "Bilirubine",
+							 	 "type": "BABY"
+							 },
+							 {
+							 	"name": "FSC",
+							 	"type": "BABY"
+							 },
+							 {
+							 	"name": "Glycémie",
+							 	"type": "BABY"
+							 }
+							]
+						}
+					]
+				},
+				{
+					"name": "Note",
+					"type": "NOTE"
 				}
 			]
 		},
 		{
-			"name": "Louise Falardeau",
-			"diagnostic": "Accouchement par voie vaginale",
-			"bed": "57",
-			"description": "Whatever, some really long text"
+			"initials": "LC",
+			"age": "26",
+			"weight": "55",
+			"number": "3",
+			"diagnostic": "Accouchement par césarienne",
+			"description": "",
 			"tasks": [
 				{
 					"name" : "Médicaments",
+					"type": "DRUG"
+				},
+				{
+					"name" : "Signes vitaux",
+					"type": "VITAL_SIGNS",
 					"tasks" : [
-						{ "name" : "Advil" },
-						{ "name" : "Tylenol" },
-						{ "name" : "Robitussin" },
-						{ "name" : "Soluté" }
+						{ 
+							"name" : "PA",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "PLS",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "SatO2",
+							"type": "VITAL_SIGNS" 
+						},
+						{ 
+							"name" : "RR",
+							"type": "VITAL_SIGNS"
+						}
 					]
 				},
 				{
-					"name" : "Soins",
-					"tasks" : [
-						{ "name" : "Changer Pansement" },
-						{ "name" : "Signes Vitaux" },
-						{ "name" : "Massage de pieds" },
-						{ "name" : "Vérifier blessure" }
+					"name": "Enseignement",
+					"type": "TEACHING",
+					"tasks": [
+						{
+							"name": "Syndrôme du bébé secoué",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Bain du bébé",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Allaitement",
+							"type": "TEACHING"
+						}
 					]
+				},
+				{
+					"name": "Bébé",
+					"type": "BABY",
+					"tasks": [
+						{
+							"name": "Signes vitaux",
+							"type": "BABY"	
+						},
+						{
+							"name": "Bain",
+							"type": "BABY"
+						},
+						{
+							"name": "Tests",
+							"type": "BABY",
+							"tasks": [
+							 {
+							 	 "name": "Bilirubine",
+							 	 "type": "BABY"
+							 },
+							 {
+							 	"name": "FSC",
+							 	"type": "BABY"
+							 },
+							 {
+							 	"name": "Glycémie",
+							 	"type": "BABY"
+							 }
+							]
+						}
+					]
+				},
+				{
+					"name": "Note",
+					"type": "NOTE"
 				}
 			]
 		},
 		{
-			"name": "Annette Gingras",
-			"diagnostic": "Accouchement par voie vaginale",
-			"bed": "58",
-			"description": "Whatever, some really long text"
+			"initials": "GBS",
+			"age": "22",
+			"weight": "72",
+			"number": "8",
+			"diagnostic": "Accouchement vaginal spontané",
+			"description": "",
 			"tasks": [
 				{
 					"name" : "Médicaments",
+					"type": "DRUG"
+				},
+				{
+					"name" : "Signes vitaux",
+					"type": "VITAL_SIGNS",
 					"tasks" : [
-						{ "name" : "Advil" },
-						{ "name" : "Tylenol" },
-						{ "name" : "Soluté" }
+						{ 
+							"name" : "PA",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "PLS",
+							"type": "VITAL_SIGNS"
+						},
+						{ 
+							"name" : "SatO2",
+							"type": "VITAL_SIGNS" 
+						},
+						{ 
+							"name" : "RR",
+							"type": "VITAL_SIGNS"
+						}
 					]
 				},
 				{
-					"name" : "Soins",
-					"tasks" : [
-						{ "name" : "Changer Pansement" },
-						{ "name" : "Signes Vitaux" },
-						{ "name" : "Massage de pieds" },
-						{ "name" : "Vérifier blessure" }
+					"name": "Enseignement",
+					"type": "TEACHING",
+					"tasks": [
+						{
+							"name": "Syndrôme du bébé secoué",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Bain du bébé",
+							"type": "TEACHING"
+						},
+						{
+							"name": "Allaitement",
+							"type": "TEACHING"
+						}
 					]
+				},
+				{
+					"name": "Bébé",
+					"type": "BABY",
+					"tasks": [
+						{
+							"name": "Signes vitaux",
+							"type": "BABY"	
+						},
+						{
+							"name": "Bain",
+							"type": "BABY"
+						},
+						{
+							"name": "Tests",
+							"type": "BABY",
+							"tasks": [
+							 {
+							 	 "name": "Bilirubine",
+							 	 "type": "BABY"
+							 },
+							 {
+							 	"name": "FSC",
+							 	"type": "BABY"
+							 },
+							 {
+							 	"name": "Glycémie",
+							 	"type": "BABY"
+							 }
+							]
+						}
+					]
+				},
+				{
+					"name": "Note",
+					"type": "NOTE"
 				}
 			]
-		},
+		}
 	]
 }
