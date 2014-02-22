@@ -9,6 +9,10 @@
     "express": "3.4.6",
     "ejs": "*",
     "less-middleware": "*",
-    "pg": "^2.11.1"
+    "pg": "^2.11.1",
+    "passport-local": "^0.1.6",
+    "passport": "^0.2.0",
+    "sequelize": "^1.7.0-rc8",
+    "lodash": "^2.4.1"
   }
 }
