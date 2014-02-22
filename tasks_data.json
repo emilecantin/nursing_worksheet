@@ -39,6 +39,10 @@
           "start_time": "2014-02-23T15:00:00.000Z",
           "number_of_repetitions": "4",
           "time_interval_minutes": "120"
+        },
+        {
+          "name": "Allergie: Arachides",
+          "type": "NOTE"
         }
       ]
     },
@@ -80,6 +84,10 @@
           "start_time": "2014-02-23T9:30:00.000Z",
           "number_of_repetitions": "0",
           "time_interval_minutes": "0"
+        },
+        {
+          "name": "Antécédents de violences",
+          "type": "NOTE"
         }
       ]
     }
