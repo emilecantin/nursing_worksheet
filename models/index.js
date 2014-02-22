@@ -2,7 +2,19 @@ var fs        = require('fs')
 var path      = require('path')
 var Sequelize = require('sequelize')
 var lodash    = require('lodash')
-var sequelize = new Sequelize('nursing_worksheet', 'nursing_worksheet', 'nursing_worksheet', {
+
+var config = {
+	host: process.env.OPENSHIFT_POSTGRESQL_DB_HOST || 'localhost',
+	db: process.env.PGDATABASE || 'nursing_worksheet',
+	username: process.env.OPENSHIFT_POSTGRESQL_DB_USERNAME || 'nursing_worksheet',
+	password: process.env.OPENSHIFT_POSTGRESQL_DB_PASSWORD || 'nursing_worksheet'
+};
+
+
+
+
+var sequelize = new Sequelize(config.db, config.username, config.password, {
+	host: config.host,
 	// gimme postgres, please!
 	dialect: 'postgres'
 })
