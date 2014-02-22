@@ -23,10 +23,6 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
       'click .add-task': 'onAddTaskClick'
     },
 
-    modelEvents: {
-      'change:name': 'render'
-    },
-
     initialize: function(options) {
       this.collection = this.model.nodes;
     },
@@ -72,7 +68,8 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     },
 
     onNameEdit: function() {
-      this.model.set('name', this.ui.input.val());
+      this.model.set('name', this.ui.input.val(), {silent: true});
+      this.render();
     },
 
     onAddTaskClick: function() {
