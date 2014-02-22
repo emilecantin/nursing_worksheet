@@ -2,11 +2,11 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
   var TreeView = views.TreeView = Marionette.CompositeView.extend({
     template: _.template('<label><%= name %></label> \
       <input type="text" value="<%= name %>"/> \
-      <ul class="list-group node-list"></ul> \
-      <button class="btn btn-success btn-xs pull-right add-task">+</button> \
+      <ul class="node-list"></ul> \
+	  <a class="add-task">Ajouter...</a> \
     '),
     tagName: 'li',
-    className: 'list-group-item',
+    className: 'tree-item',
     itemViewContainer: '.node-list',
 
     ui: {
@@ -80,6 +80,6 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
   var TreeRoot = views.TreeRoot = Marionette.CollectionView.extend({
     itemView: TreeView,
     tagName: 'ul',
-    className: 'list-group'
+    className: 'tree-root'
   });
 });

@@ -11,3 +11,6 @@ a {
 .task-tree-container {
   margin-top: 10px;
 }
+.add-task {
+  display: block;
+}
