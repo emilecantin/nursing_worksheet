@@ -3,7 +3,7 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     template: _.template('<label><%= name %></label> \
       <input type="text" value="<%= name %>"/> \
       <ul class="node-list"></ul> \
-	  <a class="add-task">Ajouter...</a> \
+      <a class="add-task">Ajouter...</a> \
     '),
     tagName: 'li',
     className: 'tree-item',
@@ -36,11 +36,11 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
         this.showInput();
       }
 
-	  if (this.model === this.model.collection.last()) {
-		  this.ui.addButton.css('display', 'block');
-	  } else {
-		  this.ui.addButton.css('display', 'none');
-	  }
+      if (this.model === this.model.collection.last()) {
+        this.ui.addButton.css('display', 'block');
+      } else {
+        this.ui.addButton.css('display', 'none');
+      }
     },
 
     onLabelClick: function() {
