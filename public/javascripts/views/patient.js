@@ -199,11 +199,10 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
     },
 
     updateTasks: function() {
-		var diag_val = _(diagnostics).findWhere({id: this.ui.diagnostic.val()});
-		if (diag_val && diag_val.tasks) {
-			this.model.tasks = new models.Diagnostics(diag_val.tasks);
-		}
-
+      var diag_val = _(diagnostics).findWhere({id: this.ui.diagnostic.val()});
+      if (diag_val && diag_val.tasks) {
+        this.model.tasks = new models.Diagnostics(diag_val.tasks);
+      }
     },
 
     renderTaskTree: function() {
@@ -233,14 +232,26 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
   var Patients = views.Patients = Marionette.CompositeView.extend({
     events: {
       'click .add-patient': 'onAddPatientClick',
-      'click .save-patients': 'onSavePatientsClick'
+      'click .save-patients': 'onSavePatientsClick',
+      'change .start-time': 'onStartTimeChange',
+      'change .end-time': 'onEndTimeChange'
     },
     itemView: Patient,
     itemViewContainer: '.patients-container',
     template: '#patients-template',
 
+    ui: {
+      startTime: '.start-time',
+      endTime: '.end-time'
+    },
+
     initialize: function() {
       this.collection = this.model.patients;
+    },
+
+    onRender: function() {
+      this.ui.startTime.datetimepicker();
+      this.ui.endTime.datetimepicker();
     },
 
     onAddPatientClick: function() {
@@ -251,6 +262,14 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
       this.model.save().done(function() {
         alertify.success('Changements sauvegardés!');
       });
+    },
+
+    onStartTimeChange: function() {
+      this.model.set('startTime', this.ui.startTime.val());
+    },
+
+    onEndTimeChange: function() {
+      this.model.set('endTime', this.ui.endTime.val());
     }
   });
 }, App.models);

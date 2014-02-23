@@ -19,6 +19,7 @@
     "bootstrap": "*",
     "backbone": "*",
     "backbone.marionette": "*",
-    "alertify.js": "~0.3.11"
+    "alertify.js": "~0.3.11",
+    "smalot-bootstrap-datetimepicker": "~2.2.0"
   }
 }

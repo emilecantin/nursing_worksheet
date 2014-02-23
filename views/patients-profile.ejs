@@ -6,6 +6,7 @@
     <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
     <link rel='stylesheet' href='/bower_components/alertify.js/themes/alertify.core.css' />
     <link rel='stylesheet' href='/bower_components/alertify.js/themes/alertify.bootstrap.css' />
+    <link rel='stylesheet' href='/bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -31,6 +32,7 @@
   <script type="text/javascript" src="/bower_components/backbone/backbone.js"></script>
   <script type="text/javascript" src="/bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
   <script type="text/javascript" src="/bower_components/alertify.js/lib/alertify.js"></script>
+  <script type="text/javascript" src="/bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 
   <script type="text/javascript" src="/javascripts/patients-profile.js"></script>
   <script type="text/javascript" src="/javascripts/models/work-quarter.js"></script>
@@ -80,13 +82,13 @@
         <div class="form-group">
           <label class="col-sm-2 control-label" for="date_start">Début</label>
           <div class="col-sm-4">
-            <input class="form-control" type="datetime" id="date_start">
+            <input class="form-control start-time" type="text" id="date_start">
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-2 control-label" for="date_end">Fin</label>
           <div class="col-sm-4">
-            <input class="form-control" type="datetime" id="date_end">
+            <input class="form-control end-time" type="text" id="date_end">
           </div>
         </div>
       </div>
