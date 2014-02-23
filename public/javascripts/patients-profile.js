@@ -5,10 +5,10 @@ App.addRegions({
 });
 
 $(document).ready(function() {
-  var collection = window.patients = new App.models.Patients([{}]);
+  var model = window.workQuarter = new App.models.WorkQuarter();
 
   var view = new App.views.Patients({
-    collection: collection
+    model: model
   });
 
   App.content.show(view);

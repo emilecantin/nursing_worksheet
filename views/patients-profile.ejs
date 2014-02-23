@@ -4,17 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title %></title>
     <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='/bower_components/alertify.js/themes/alertify.core.css' />
+    <link rel='stylesheet' href='/bower_components/alertify.js/themes/alertify.bootstrap.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <div class="header">
-      <div class="container">
-        <h1>Gestionnaire de patients</h1>
-        <p>Ajouter ou enlever des patients, et personnaliser les tâches pour chaque patient</p>
+    <div class="body">
+      <div class="header">
+        <div class="container">
+          <h1>Gestionnaire de patients</h1>
+          <p>Ajouter ou enlever des patients, et personnaliser les tâches pour chaque patient</p>
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="center-block" id="content"></div>
+      <div class="content container" id="content">
+      </div>
+      <div class="container footer">
+        <div class="container">
+          <p>Built for <a href="https://twitter.com/search?q=%23HHMTL2014&src=hash">#hhmtl2014</a></p>
+        </div>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
@@ -22,8 +30,10 @@
   <script type="text/javascript" src="/bower_components/underscore/underscore.js"></script>
   <script type="text/javascript" src="/bower_components/backbone/backbone.js"></script>
   <script type="text/javascript" src="/bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
+  <script type="text/javascript" src="/bower_components/alertify.js/lib/alertify.js"></script>
 
   <script type="text/javascript" src="/javascripts/patients-profile.js"></script>
+  <script type="text/javascript" src="/javascripts/models/work-quarter.js"></script>
   <script type="text/javascript" src="/javascripts/views/tree-view.js"></script>
   <script type="text/javascript" src="/javascripts/models/tree-node.js"></script>
   <script type="text/javascript" src="/javascripts/models/diagnostic.js"></script>
@@ -62,6 +72,8 @@
     <div class="patients-container"></div>
     <div class="row">
       <button class="btn btn-success btn-lg add-patient">Ajouter</button>
+      <button class="btn btn-info btn-lg save-patients pull-right">Sauvegarder</button>
     </div>
   </script>
+
 </html>

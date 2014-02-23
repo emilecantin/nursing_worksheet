@@ -53,6 +53,6 @@ exports.create = function(req, res) {
 		date_end: req.body.date_end,
 		patients_tree: JSON.stringify(req.body.patients)
 	}).success(function(workdayConf) {
-		res.send(200);
+		res.send(204);
 	})
 };

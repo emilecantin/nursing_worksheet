@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap": "*",
     "backbone": "*",
-    "backbone.marionette": "*"
+    "backbone.marionette": "*",
+    "alertify.js": "~0.3.11"
   }
 }

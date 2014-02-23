@@ -232,14 +232,25 @@ App.module('views', function(views, App, Backbone, Marionette, $, _, models) {
 
   var Patients = views.Patients = Marionette.CompositeView.extend({
     events: {
-      'click .add-patient': 'onAddPatientClick'
+      'click .add-patient': 'onAddPatientClick',
+      'click .save-patients': 'onSavePatientsClick'
     },
     itemView: Patient,
     itemViewContainer: '.patients-container',
     template: '#patients-template',
 
+    initialize: function() {
+      this.collection = this.model.patients;
+    },
+
     onAddPatientClick: function() {
       this.collection.add({});
+    },
+
+    onSavePatientsClick: function() {
+      this.model.save().done(function() {
+        alertify.success('Changements sauvegardés!');
+      });
     }
   });
 }, App.models);
