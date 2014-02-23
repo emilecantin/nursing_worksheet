@@ -9,8 +9,8 @@
   <body>
     <div class="header">
       <div class="container">
-        <h1>Gestionnaire de patients</h1>
-        <p>Ajouter ou enlever des patients, et personnaliser les tâches pour chaque patient</p>
+        <h1>Quart de travail</h1>
+        <p>Ajouter ou enlever des patients, et personnaliser les tâches pour chaque patient.</p>
       </div>
     </div>
     <div class="container">
@@ -65,9 +65,27 @@
   </script>
 
   <script type="text/template" id="patients-template">
-    <div class="patients-container"></div>
-    <div class="row">
-      <button class="btn btn-success btn-lg add-patient">Ajouter</button>
+    <div class="well">
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="date_start">Début</label>
+          <div class="col-sm-4">
+            <input class="form-control" type="datetime" id="date_start">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="date_end">Fin</label>
+          <div class="col-sm-4">
+            <input class="form-control" type="datetime" id="date_end">
+          </div>
+        </div>
+      </div>
     </div>
+    <div>
+      <div class="patients-container"></div>
+      <div class="row">
+        <button class="btn btn-success btn-lg add-patient">Ajouter</button>
+      </div>
+    </form>
   </script>
 </html>
