@@ -4,5 +4,5 @@
  */
 
 module.exports = function(req, res){
-  res.render('patients-profile', { title: 'Express' });
+  res.render('patients-profile', { title: 'Justine Time - Quart de travail' });
 };
