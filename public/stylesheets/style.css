@@ -14,3 +14,7 @@ a {
 .add-task {
   display: block;
 }
+.remove-node {
+  color: #a94442;
+  cursor: pointer;
+}

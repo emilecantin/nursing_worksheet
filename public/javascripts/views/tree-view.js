@@ -2,6 +2,7 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
   var TreeView = views.TreeView = Marionette.CompositeView.extend({
     template: _.template('<label><%= name %></label> \
       <input type="text" value="<%= name %>"/> \
+      <span class="remove-node">x</span> \
       <ul class="node-list"></ul> \
       <a class="add-task">Ajouter...</a> \
     '),
@@ -20,7 +21,12 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
       'click label:first': 'onLabelClick',
       'keypress input:first': 'onInputKeypress',
       'blur input:first': 'onInputBlur',
-      'click .add-task': 'onAddTaskClick'
+      'click .add-task': 'onAddTaskClick',
+      'click .remove-node': 'onRemoveNodeClick'
+    },
+
+    collectionEvents: {
+      'remove': 'render'
     },
 
     initialize: function(options) {
@@ -75,6 +81,10 @@ App.module('views', function(views, App, Backbone, Marionette, $, _) {
     onAddTaskClick: function() {
       this.model.collection.add({});
       this.render();
+    },
+
+    onRemoveNodeClick: function() {
+      this.model.destroy();
     }
   });
 
